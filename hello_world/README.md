@@ -1,0 +1,1 @@
+# This directory contains basic script for running C
