@@ -7,7 +7,7 @@
 int main(void)
 {
 int small_letters = 97;
-int big_letters = 65;
+ 
 while (small_letters <= 122)
 {
 putchar(small_letters);
