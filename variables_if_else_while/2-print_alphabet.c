@@ -13,10 +13,6 @@ while (small_letters <= 122)
 putchar(small_letters);
 small_letters++;
 }
-while (big_letters <= 90)
-{
-putchar(big_letters);
-big_letters++;
-}
+putchar('\n');
 return (0);
 }
