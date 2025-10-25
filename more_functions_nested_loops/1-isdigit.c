@@ -1,11 +1,13 @@
 #include "main.h"
 
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
+ * _isdigit - checks for a digit ( 0 through 9 )
+ * @c: the character to check
+ * Return: 1 if c is uppercase, 0 otherwise
  */
-int main(void)
+int _isdigit(int c)
 {
-	return (0);
+	if (c >= '0' && c <= '9')
+		return (1);
+return (0);
 }
