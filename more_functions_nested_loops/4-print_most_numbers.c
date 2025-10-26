@@ -1,11 +1,21 @@
 #include "main.h"
 
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
+ * print_most_numbers - print the numbers from 0 to 9 except 2 and 4
+ * Return: nothing
  */
-int main(void)
+void print_most_numbers(void)
 {
-	return (0);
+	int index = '0';
+
+	while (index <= '9')
+	{
+		if (!(index == '2' || index == '4'))
+		{
+			_putchar(index);
+		}
+		index++;
+	}
+	_putchar('\n');
+return;
 }
