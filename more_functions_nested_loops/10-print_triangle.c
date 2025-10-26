@@ -1,11 +1,34 @@
 #include "main.h"
 
 /**
- * main - Entry point
+ * print_triangle - Entry point
  *
- * Return: Always 0 (Success)
+ * @size: triangle size
+ *
+ * Return: none
  */
-int main(void)
+
+void print_triangle(int size)
 {
-	return (0);
+	int line;
+	int space;
+	int row;
+
+	if (size <= 0)
+	{
+		_putchar('\n');
+		return;
+	}
+	for (line = 1; line <= size; line++)
+	{
+		for (space = size - line; space > 0; space--)
+		{
+			_putchar(32); /* space character */
+		}
+		for (row = 1; row <= line; row++)
+		{
+			_putchar('#');
+		}
+		_putchar('\n');
+	}
 }
