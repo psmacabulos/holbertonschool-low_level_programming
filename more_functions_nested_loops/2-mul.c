@@ -1,11 +1,12 @@
 #include "main.h"
 
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
+ * mul - gets the product of the two arguments
+ * @a : integer to be multiplied
+ * @b : integer to be multiplied
+ * Return: product of @a and @b
  */
-int main(void)
+int mul(int a, int b)
 {
-	return (0);
+return (a * b);
 }
