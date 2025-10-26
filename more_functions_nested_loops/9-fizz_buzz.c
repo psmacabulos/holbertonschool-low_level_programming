@@ -21,7 +21,10 @@ int main(void)
 		}
 		else if (index % 5 == 0)
 		{
+			if (index != 100)
 			printf("Buzz ");
+			else
+				printf("Buzz");
 		}
 		else
 		printf("%d ", index);
