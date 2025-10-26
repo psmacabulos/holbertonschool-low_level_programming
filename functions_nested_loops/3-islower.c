@@ -1,11 +1,15 @@
 #include "main.h"
 /**
- * main - check the code
+ * _islower - check the code
+ *
+ * @c: the digit to check if lowercase
  *
  * Return: Always 0.
  */
-int main(void)
+
+int _islower(int c)
 {
-    print_alphabet();
-    return (0);
+	if (c >= 'a' && c <= 'z')
+		return (1);
+	return (0);
 }
