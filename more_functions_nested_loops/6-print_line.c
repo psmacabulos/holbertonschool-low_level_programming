@@ -1,11 +1,16 @@
 #include "main.h"
 
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
+ * print_line - draws a straight line in the terminal
+ * @n : number of times the character  '_' needs to be printed
+ * Return: nothing
  */
-int main(void)
+void print_line(int n)
 {
-	return (0);
+	while (n > 0)
+	{
+		_putchar('_');
+		n--;
+	}
+	_putchar('\n');
 }
