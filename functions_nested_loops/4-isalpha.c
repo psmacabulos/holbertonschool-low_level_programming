@@ -1,11 +1,12 @@
 #include "main.h"
 /**
- * main - check the code
- *
+ * _isalpha - check the code
+ * @c : digit to check if alphabet or not
  * Return: Always 0.
  */
-int main(void)
+int _isalpha(int c)
 {
-    print_alphabet();
-    return (0);
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+		return (1);
+	return (0);
 }
