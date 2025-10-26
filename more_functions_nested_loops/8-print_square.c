@@ -1,11 +1,23 @@
 #include "main.h"
 
 /**
- * main - Entry point
+ * print_square - prints a square using the '#' character
  *
- * Return: Always 0 (Success)
+ * @size: the length and width of the square
+ *
+ * Return: nothing
  */
-int main(void)
+void print_square(int size)
 {
-	return (0);
+	int line;
+	int row;
+
+	for (line = 0; line < size; line++)
+	{
+		for (row = 0; row < size; row++)
+		{
+			_putchar('#');
+		}
+		_putchar('\n');
+	}
 }
