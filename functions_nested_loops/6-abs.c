@@ -1,11 +1,16 @@
 #include "main.h"
 /**
- * main - check the code
- *
+ * _abs - computes the absolute number of an integer
+ * @x : - the integer to be converted to its absolute value
  * Return: Always 0.
  */
-int main(void)
+int _abs(int x)
 {
-    print_alphabet();
-    return (0);
+	if (x > 0)
+		return (x);
+	else if (x < 0)
+	{
+		return (x * -1);
+	}
+	return (0);
 }
