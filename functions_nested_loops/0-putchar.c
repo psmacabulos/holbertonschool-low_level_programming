@@ -1,11 +1,19 @@
 #include "main.h"
+
 /**
- * main - check the code
+ * main - entry point
  *
- * Return: Always 0.
+ * Return: Always 0.(Success)
  */
 int main(void)
 {
-    print_alphabet();
-    return (0);
+	int index;
+	char words[] = {'_', 'p', 'u', 't', 'c', 'h', 'a', 'r'};
+
+	for (index = 0; index < 8; index++)
+	{
+		_putchar(words[index]);
+	}
+	_putchar('\n');
+	return (0);
 }
