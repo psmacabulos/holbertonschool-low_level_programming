@@ -1,11 +1,27 @@
 #include "main.h"
 
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
+ * print_diagonal - Entry point
+ * @n : number of times character '\' will appear
+ * Return: None
  */
-int main(void)
+void print_diagonal(int n)
 {
-	return (0);
+	if (n <= 0)
+	{
+		_putchar('\n');
+		return;
+	}
+	int space;
+	int line;
+
+	for (line = 0; line < n; line++)
+	{
+		for (space = 0; space <= line; space++)
+		{
+			_putchar(32); /* space character */
+		}
+		_putchar(92); /* '\' character */
+		_putchar('\n');
+	}
 }
