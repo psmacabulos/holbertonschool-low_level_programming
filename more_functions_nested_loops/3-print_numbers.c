@@ -1,11 +1,18 @@
 #include "main.h"
 
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
+ * print_numbers - print the numbers from 0 to 9
+ * Return: 0 (Success)
  */
-int main(void)
+void print_numbers(void)
 {
-	return (0);
+	int index = '0';
+
+	while (index <= '9')
+	{
+		_putchar(index);
+		index++;
+	}
+	_putchar('\n');
+return;
 }
