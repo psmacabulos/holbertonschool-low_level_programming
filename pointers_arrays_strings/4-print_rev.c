@@ -1,11 +1,18 @@
 #include "main.h"
 
 /**
- * _4_print_rev - placeholder function derived from filename 4-print_rev.c
+ * print_rev - prints a string in reverse followed by a new line
  *
- * Return: 0
+ * @s: String to be reversed
  */
-int _4_print_rev(void)
+void print_rev(char *s)
 {
-    return (0);
+	int i;
+	int length = 0;
+
+	while (s[length] != '\0')
+		length++;
+	for (i = length; i >= 0; i--)
+		_putchar(s[i]);
+	_putchar('\n');
 }
