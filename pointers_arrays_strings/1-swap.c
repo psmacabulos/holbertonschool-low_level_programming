@@ -1,11 +1,15 @@
 #include "main.h"
 
 /**
- * _1_swap - placeholder function derived from filename 1-swap.c
+ * swap_int - swaps the value of two integers
  *
- * Return: 0
+ * @a: integer pointer
+ * @b: integer pointer
+ * Return: none
  */
-int _1_swap(void)
+void swap_int(int *a, int *b)
 {
-    return (0);
+	int c = *a;
+	*a = *b;
+	*b = c;
 }
