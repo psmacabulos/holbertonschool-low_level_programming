@@ -1,11 +1,23 @@
 #include "main.h"
 
 /**
- * _7_puts_half - placeholder function derived from filename 7-puts_half.c
+ * puts_half - prints the second half of the string
  *
- * Return: 0
+ * @str: string to be halfved and printed
  */
-int _7_puts_half(void)
+void puts_half(char *str)
 {
-    return (0);
+	int length = 0;
+	int n;
+
+	while (str[length] != '\0')
+		length++;
+
+	if (length % 2 == 0)
+		n = (length) / 2;
+	else
+		n = (length + 1) / 2;
+	for (; n <= length - 1; n++)
+		_putchar(str[n]);
+	_putchar('\n');
 }
