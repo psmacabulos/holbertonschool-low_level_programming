@@ -1,11 +1,18 @@
 #include "main.h"
 
 /**
- * _2_strlen - placeholder function derived from filename 2-strlen.c
+ * _strlen - returns the length of a string
  *
- * Return: 0
+ * @s: pointer to the string
+ *
+ * Return: number of characters in the string
  */
-int _2_strlen(void)
+int _strlen(char *s)
 {
-    return (0);
+	int len = 0;
+
+	while (s[len] != '\0')
+		len++;
+
+	return (len);
 }
