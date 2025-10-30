@@ -1,11 +1,21 @@
 #include "main.h"
 
 /**
- * _6_puts2 - placeholder function derived from filename 6-puts2.c
+ * puts2 - prints every other character of a string
  *
- * Return: 0
+ * @str: string to be evaluated and printed
+ *
  */
-int _6_puts2(void)
+void puts2(char *str)
 {
-    return (0);
+	int i = 0;
+
+	while (str[i] != '\0')
+	{
+		if (i % 2 == 0)
+		_putchar(str[i]);
+
+		i++;
+	}
+	_putchar('\n');
 }
