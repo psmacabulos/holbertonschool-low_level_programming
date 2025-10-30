@@ -1,11 +1,18 @@
 #include "main.h"
 
 /**
- * _3_puts - placeholder function derived from filename 3-puts.c
+ * _puts - placeholder function derived from filename 3-puts.c
  *
- * Return: 0
+ * @str: string to be printed
  */
-int _3_puts(void)
+void _puts(char *str)
 {
-    return (0);
+	int index = 0;
+
+	while (str[index] != '\0')
+	{
+		_putchar(str[index]);
+		index++;
+	}
+	_putchar('\n');
 }
