@@ -1,11 +1,20 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
- * _8_print_array - placeholder function derived from filename 8-print_array.c
+ * print_array - prints the "n" number of elements in an array
  *
- * Return: 0
+ * @a: array
+ *
+ * @n: number of elements to be printed
  */
-int _8_print_array(void)
+
+void print_array(int *a, int n)
 {
-    return (0);
+	int i;
+
+	for (i = 0; i < n; i++)
+	{
+		printf("%d,  ", a[i]);
+	}
+	printf("\n");
 }
