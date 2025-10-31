@@ -1,11 +1,20 @@
 #include "main.h"
 
 /**
- * _9_strcpy - placeholder function derived from filename 9-strcpy.c
- *
- * Return: 0
+ * _strcpy - function that copies the string pointed by src
+ * @src :  source of the string
+ * @dest : destination buffer
+ * Return: *dest pointer which have already copied the contents of src
  */
-int _9_strcpy(void)
+char *_strcpy(char *dest, char *src)
 {
-    return (0);
+	int i = 0;
+
+	while (src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }
