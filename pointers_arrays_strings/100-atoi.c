@@ -1,42 +1,49 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
  * _atoi - converts a string to an integer
- * @s: input string
+ * @s: string to be converted
  *
- * Return: the integer value, or 0 if no digits found
+ * Return: the integer value, or 0 if no numbers found
  */
 int _atoi(char *s)
 {
-	int sign = 1;
-
 	int result = 0;
-
+	int sign = 1;
+	int i = 0;
 	int started = 0;
 
-	char *p = s;
-
-	while (*p != '\0')
+	/* Skip initial non-numeric characters and process signs */
+	while (s[i])
 	{
-		if (!started && (*p == '-' || *p == '+'))
+		if (s[i] == '-')
 		{
-			if (*p == '-')
-				sign *= -1;
+			if (started)
+				break;
+			sign *= -1;
 		}
-		else if (*p >= '0' && *p <= '9')
+		else if (s[i] == '+')
 		{
-			int digit = *p - '0';
+			if (started)
+				break;
+		}
+		else if (s[i] >= '0' && s[i] <= '9')
+		{
 
 			started = 1;
 
-			result = result * 10 + digit;
+			result = result * 10 + (s[i] - '0');
+
+			/* Check if next character is still a digit */
+			if (!(s[i + 1] >= '0' && s[i + 1] <= '9'))
+				break;
 		}
 		else if (started)
 		{
+			/* Non-digit after we started reading number */
 			break;
 		}
-
-		p++;
+		i++;
 	}
 
 	return (result * sign);
