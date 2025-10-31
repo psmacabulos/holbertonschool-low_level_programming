@@ -8,10 +8,13 @@
  */
 int _atoi(char *s)
 {
-	char *p = s;
 	int sign = 1;
+
 	int result = 0;
+
 	int started = 0;
+
+	char *p = s;
 
 	while (*p != '\0')
 	{
@@ -23,24 +26,18 @@ int _atoi(char *s)
 		else if (*p >= '0' && *p <= '9')
 		{
 			int digit = *p - '0';
-			started = 1;
 
-			/* Overflow check before multiplying */
-			if (sign == 1 && result > (2147483647 - digit) / 10)
-				return 2147483647;
-			if (sign == -1 && result > (2147483648 - digit) / 10)
-				return -2147483648;
+			started = 1;
 
 			result = result * 10 + digit;
 		}
 		else if (started)
+		{
 			break;
+		}
+
 		p++;
 	}
 
-	/* Final overflow-safe return */
-	if (sign == -1 && result == 2147483648)
-		return -2147483648;
-
-	return result * sign;
+	return (result * sign);
 }
