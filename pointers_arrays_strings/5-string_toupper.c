@@ -1,11 +1,21 @@
 #include "main.h"
 
 /**
- * _5_string_toupper - 
- *
- * Return: 0
+ * string_toupper - converts the string to uppercase
+ * @str : string to be converted to uppercase
+ * Return: string
  */
-int _5_string_toupper(void)
+char *string_toupper(char *str)
 {
-    return (0);
+
+	int i = 0;
+
+		while (str[i])
+		{
+			if (str[i] >= 'a' && str[i] <= 'z')
+			str[i] -= 32;
+			i++;
+		}
+
+		return (str);
 }
