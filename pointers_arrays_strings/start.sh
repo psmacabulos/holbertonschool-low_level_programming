@@ -7,14 +7,14 @@
 set -euo pipefail
 
 files=(
-    "0-strcat.c"
-    "1-strncat.c"
-    "2-strncpy.c"
-    "3-strcmp.c"
-    "4-rev_array.c"
-    "5-string_toupper.c"
-    "6-cap_string.c"
-    "7-leet.c"
+    "0-memset.c"
+    "1-memcpy.c"
+    "2-strchr.c"
+    "3-strspn.c"
+    "4-strpbrk.c"
+    "5-strstr.c"
+    "7-print_chessboard.c"
+    "8-print_diagsums.c"
     )
 
 sanitize_name() {
@@ -38,7 +38,7 @@ for file in "${files[@]}"; do
 
 /**
  * ${funcname} - 
- *
+ * @
  * Return: 0
  */
 int ${funcname}(void)
