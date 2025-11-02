@@ -1,11 +1,20 @@
 #include "main.h"
 
 /**
- * _2_strchr - 
- * @
- * Return: 0
+ * _strchr - locates a character in a string
+ * @s: string to be searched
+ * @c: char to be located
+ * Return: pointer to the first occurence or NULL
  */
-int _2_strchr(void)
+char *_strchr(char *s, char c)
 {
-    return (0);
+	while (*s)
+	{
+		if (*s == c)
+			return (s);
+		s++;
+	}
+	if (c == '\0')
+		return (s);
+	return (NULL);
 }

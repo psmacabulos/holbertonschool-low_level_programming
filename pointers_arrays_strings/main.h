@@ -4,7 +4,7 @@
 int _putchar(int c);
 
 /* Add your function prototypes below this line */
-
+#include <stddef.h>
 void reset_to_98(int *n);
 void swap_int(int *a, int *b);
 int _strlen(char *s);
