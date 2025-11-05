@@ -1,11 +1,19 @@
 #include "main.h"
 
 /**
- * _4_pow_recursion - 
- * @
- * Return: 0
+ * _pow_recursion - returns the value of x raised to the power of y
+ * @x: base int
+ * @y: exponent value
+ * Return: value of x raised to y
  */
-int _4_pow_recursion(void)
+
+int _pow_recursion(int x, int y)
 {
-    return (0);
+	/* Base case */
+	if (y == 0)
+		return (1);
+	if (y < 0)
+		return (-1);
+
+	return (x * _pow_recursion(x, y - 1));
 }
