@@ -1,11 +1,16 @@
 #include "main.h"
 
 /**
- * _3_factorial - 
- * @
- * Return: 0
+ * factorial - computes the factorial of n
+ * @n: integer given
+ * Return: factorial of n
  */
-int _3_factorial(void)
+int factorial(int n)
 {
-    return (0);
+	/* Create base case */
+	if (n == 1)
+		return (1);
+	if (n < 0)
+		return (-1);
+	return (n * factorial(n - 1));
 }
