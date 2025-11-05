@@ -1,11 +1,18 @@
 #include "main.h"
 
 /**
- * _2_strlen_recursion - 
- * @
- * Return: 0
+ * _strlen_recursion - returns the length of the string
+ * @s: string input
+ * Return: length of the string
  */
-int _2_strlen_recursion(void)
+
+int _strlen_recursion(char *s)
 {
-    return (0);
+	/* Create a base case */
+	if (!*s)
+		return (0);
+
+	/* Recursive case */
+	return (1 + _strlen_recursion(s + 1));
+
 }
