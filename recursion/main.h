@@ -2,6 +2,8 @@
 #define MAIN_H
 
 int _putchar(int c);
+void _print_rev_recursion(char *s);
+
 
 /* Add your function prototypes below this line */
 #include <stddef.h>

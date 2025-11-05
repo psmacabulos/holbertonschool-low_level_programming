@@ -5,6 +5,7 @@
  * @s: string to be printed reversed
  *
  */
+
 void _print_rev_recursion(char *s)
 {
 	/* Create a base case */
@@ -13,5 +14,4 @@ void _print_rev_recursion(char *s)
 		return;
 	}
 	_print_rev_recursion(s + 1);
-	_putchar(*s);
 }
