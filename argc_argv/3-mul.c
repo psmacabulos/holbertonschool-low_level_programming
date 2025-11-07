@@ -1,11 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "main.h"
 
 /**
- * _3_mul - 
- * @
- * Return: 0
+ * main - multiplies two numbers passed as arguments
+ * @argc: argument count
+ * @argv: argument vector
+ * Return: 0 on success, 1 on error
  */
-int _3_mul(void)
+int main(int argc, char *argv[])
 {
-    return (0);
+	int a, b, result;
+
+	if (argc != 3)
+	{
+		printf("Error\n");
+		return (1);
+	}
+
+	a = atoi(argv[1]);
+	b = atoi(argv[2]);
+	result = a * b;
+
+	printf("%d\n", result);
+	return (0);
 }
