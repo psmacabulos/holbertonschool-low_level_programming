@@ -3,6 +3,26 @@
 #include<string.h>
 
 /**
+ * _strcopy - copies string from src to dest
+ * @dest: destination of string
+ * @src: source of string
+ */
+
+void _strcpy(char *dest, char *src)
+{
+	if (!dest || !src)
+		return;
+
+	while (*src)
+	{
+		*dest = *src;
+		dest++;
+		src++;
+	}
+	*dest = '\0';
+}
+
+/**
  * _strlen - counts the number of characters in a string
  * @s: string to be counted
  * Return: length of the string
@@ -42,7 +62,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(d);
 		return (NULL);
 	}
-	strcpy(n_copy, name);
+	_strcpy(n_copy, name);
 
 	o_copy = malloc(_strlen(owner) + 1);
 	if (o_copy == NULL)
@@ -51,7 +71,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(d);
 		return (NULL);
 	}
-	strcpy(o_copy, owner);
+	_strcpy(o_copy, owner);
 
 	d->name = n_copy;
 	d->age = age;
