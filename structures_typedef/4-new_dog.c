@@ -3,7 +3,7 @@
 #include<string.h>
 
 /**
- * _strcopy - copies string from src to dest
+ * _strcpy - copies string from src to dest
  * @dest: destination of string
  * @src: source of string
  */
