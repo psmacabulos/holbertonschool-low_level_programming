@@ -1,6 +1,20 @@
 #include <stdlib.h>
-#include <string.h>
 #include "dog.h"
+#include<string.h>
+
+/**
+ * _strlen - counts the number of characters in a string
+ * @s: string to be counted
+ * Return: length of the string
+ */
+int _strlen(char *s)
+{
+	int len = 0;
+
+	while (s && s[len] != '\0')
+		len++;
+return (len);
+}
 
 /**
  * new_dog - creates a new dog and stores copies of name and owner
@@ -22,7 +36,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (d == NULL)
 		return (NULL);
 
-	n_copy = malloc(strlen(name) + 1);
+	n_copy = malloc(_strlen(name) + 1);
 	if (n_copy == NULL)
 	{
 		free(d);
@@ -30,7 +44,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 	strcpy(n_copy, name);
 
-	o_copy = malloc(strlen(owner) + 1);
+	o_copy = malloc(_strlen(owner) + 1);
 	if (o_copy == NULL)
 	{
 		free(n_copy);
