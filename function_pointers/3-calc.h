@@ -1,11 +1,24 @@
-#include "main.h"
+#ifndef MY_HEADER_H
+#define MY_HEADER_H
 
 /**
- * _3_calc - 
- * @
- * Return: 0
+ * struct op - Struct op
+ *
+ * @op: The operator
+ * @f: The function associated
  */
-int _3_calc(void)
+
+typedef struct op
 {
-    return (0);
-}
+	char *op;
+	int (*f)(int a, int b);
+} op_t;
+
+int op_add(int a, int b);
+int op_sub(int a, int b);
+int op_mul(int a, int b);
+int op_div(int a, int b);
+int op_mod(int a, int b);
+int (*get_op_func(char *s))(int, int);
+
+#endif
