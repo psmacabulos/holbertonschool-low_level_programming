@@ -1,0 +1,11 @@
+#include "lists.h"
+
+/**
+ * _0_print_dlistint -
+ * @
+ * Return: 0
+ */
+int _0_print_dlistint(void)
+{
+    return (0);
+}
