@@ -1,6 +1,33 @@
 #include "lists.h"
 
 /**
+ * insert_in_middle - inserts a new node after a given node
+ * @current: node before the insertion point
+ * @n: integer to store in the new node
+ *
+ * Return: address of the new node, or NULL if it failed
+ */
+static dlistint_t *insert_in_middle(dlistint_t *current, int n)
+{
+	dlistint_t *new;
+
+	new = malloc(sizeof(dlistint_t));
+	if (new == NULL)
+		return (NULL);
+
+	new->n = n;
+	new->next = current->next;
+	new->prev = current;
+
+	if (current->next != NULL)
+		current->next->prev = new;
+
+	current->next = new;
+
+	return (new);
+}
+
+/**
  * insert_dnodeint_at_index - inserts a new node at a given position
  * @h: double pointer to the head of the list
  * @idx: index where the new node should be added, starting from 0
@@ -33,31 +60,4 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		return (add_dnodeint_end(h, n));
 
 	return (insert_in_middle(current, n));
-}
-
-/**
- * insert_in_middle - helper to insert a node after current
- * @current: node before the insertion point
- * @n: integer to store in the new node
- *
- * Return: address of the new node, or NULL if it failed
- */
-dlistint_t *insert_in_middle(dlistint_t *current, int n)
-{
-	dlistint_t *new;
-
-	new = malloc(sizeof(dlistint_t));
-	if (new == NULL)
-		return (NULL);
-
-	new->n = n;
-	new->next = current->next;
-	new->prev = current;
-
-	if (current->next != NULL)
-		current->next->prev = new;
-
-	current->next = new;
-
-	return (new);
 }
